@@ -102,6 +102,7 @@ size_t DumbTXSWS::write(uint8_t b)
     delayMicroseconds(_bitTime * 3);	  /*  (3, just in case) */
     /* pin is now in idle state again. */
     interrupts();
+    return(1); // needed to add this to get it to compile
 }
 
 void DumbTXSWS::flush()
